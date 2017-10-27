@@ -1,0 +1,497 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wh",
+				"where"
+			],
+			[
+				"male",
+				"maleAttrs"
+			],
+			[
+				"female",
+				"femaleAttrs"
+			],
+			[
+				"getElemen",
+				"getElementByClassName"
+			],
+			[
+				"check",
+				"checkGender"
+			],
+			[
+				"che",
+				"checkGender"
+			],
+			[
+				"ma",
+				"max\tAttr"
+			],
+			[
+				"min",
+				"min\tAttr"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"text-de",
+				"text-decoration-style"
+			],
+			[
+				"navbar-col",
+				"navbar-collapse-1"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"op",
+				"option\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/samples.py",
+			"settings":
+			{
+				"buffer_size": 9259,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/perform_detection.py",
+			"settings":
+			{
+				"buffer_size": 972,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "reinde",
+		"selected_items":
+		[
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"r",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/main.py",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/plot_test.py",
+		"/D/ZPW/zpw-tasks/student-list-ts/script.ts",
+		"/D/ZPW/zpw-tasks/student-list-ts/index.html",
+		"/D/ZPW/zpw-tasks/student-list-ts/tsconfig.json",
+		"/D/ZPW/zpw-tasks/student-list-ts/script.js",
+		"/D/ZPW/zpw-tasks/quiz/index.html",
+		"/D/ZPW/lab2/zad1-form/index.html",
+		"/C/Users/Sebo/AppData/Roaming/Sublime Text 3/Packages/TypeScript/TypeScript.sublime-settings",
+		"/D/ZPW/lab1-bootstrap/index.html",
+		"/C/Users/Sebo/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/D/wd-bootcamp/c1/unit6-css/photo-blog.html",
+		"/D/ZPW/lab1-bootstrap/style.css",
+		"/D/ZPW/lab2/quiz/index.html",
+		"/D/ZPW/lab2/quiz/styles.css",
+		"/D/wd-bootcamp/c1/unit6-css/photo-blog-styles.css",
+		"/D/ZPW/lab2/Zad4/index.html",
+		"/D/ZPW/lab2/Zad4/main.css",
+		"/D/ZPW/lab2/Zad4/main.js",
+		"/D/ZPW/lab2/Zad3/slideshow2.html",
+		"/D/ZPW/lab2/Zad3/slideshow2.css",
+		"/D/ZPW/lab2/Zad3/slideshow2.js",
+		"/D/ZPW/lab2/Zad2/main.js",
+		"/D/ZPW/lab2/Zad2/index.html",
+		"/D/ZPW/lab2/Zad2/main.css",
+		"/D/ZPW/lab2/zad1-form/main.js",
+		"/D/wd-bootcamp/c1/unit 4/forms-2.html",
+		"/D/wd-bootcamp/c1/unit 4/forms-1.html",
+		"/D/wd-bootcamp/c1/unit 4/register-form.html",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/constants_and_utils.py",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/samples.py",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/ploting.py",
+		"/G/VFR/VFR/VFR-video/slovakia/2017-05-14/20170514_120808_Accelerometer.csv",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/perform_detection.py",
+		"/G/VFR/VFR/VFR-sensors/2017-05-18/Sep_WeSU @31A190_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-17/Sep_WeSU @31A190_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-video/slovenia/2017.05.03/20170503_151046_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-04/20170504_005641_Accelerometer Events.csv",
+		"/G/VFR/VFR/VFR-video/slovakia/2017-05-14/20170514_120808_Pressure.csv",
+		"/G/VFR/VFR/VFR-video/slovakia/2017-05-14/._20170514_120808_Gyroscope.csv",
+		"/G/VFR/VFR/VFR-video/slovakia/2017-05-14/20170514_120808_Magnetometer.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-14/20170514_120808_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-18/20170518_121331_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-18/head_turnings.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-18/glider_turnings.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-18/20170518_121331_Gyroscope.csv",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/realTimeDataAnalysis.py",
+		"/C/Program Files (x86)/WinPython-64bit-3.5.4.0Qt5/settings/winpython.ini",
+		"/G/VFR/VFR/VFR-sensors/2017-05-17/20170517_110200_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-06/20170506_104141_Magnetometer.csv",
+		"/G/VFR/VFR/VFR-video/slovakia/2017-05-14/20170514_120808_Gyroscope.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-17/20170517_110200_Gyroscope.csv",
+		"/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/quaterion_utils.py",
+		"/G/VFR/VFR/VFR-sensors/testy-aplikacji-ST/20170503_234213_Accelerometer.csv",
+		"/G/VFR/VFR/VFR-sensors/testy-aplikacji-ST/20170503_234213_Gyroscope.csv",
+		"/G/VFR/VFR/VFR-sensors/testy-aplikacji-ST/20170503_234213_Accelerometer Events.csv",
+		"/G/VFR/VFR/VFR-video/slovenia/2017.05.03/20170503_151046_Gyroscope.csv",
+		"/G/VFR/VFR/VFR-sensors/2017-05-02/2017-05-02-XCS-DZA-02.igc",
+		"/D/ZPW/lab1-bootstrap/lab1/Zadania/style.css",
+		"/D/ZPW/lab1-bootstrap/lab1/Zadania/CwiczenieBootstrap.html",
+		"/G/VFR/VFR/VFR-sensors/testy-aplikacji-ST/20170503_234213_Battery.csv",
+		"/G/VFR/VFR/._VFR-sensors",
+		"/G/VFR/VFR/VFR-video/slovenia/2017.05.02/._20170502_133558_Gyroscope.csv",
+		"/G/VFR/VFR/VFR-video/slovenia/2017.05.02/20170502_133558_Gyroscope.csv",
+		"/G/VFR/VFR/VFR-video/slovenia/2017.05.03/._20170503_151046_Gyroscope.csv",
+		"/D/wd-bootcamp/c1/unit5-css/09-Selector-Exercise-Starter/09_Selector_Exercise_Starter/selectors.css",
+		"/D/wd-bootcamp/c1/unit5-css/about.css",
+		"/D/wd-bootcamp/c1/unit 4/task2-pokemons.html",
+		"/D/wd-bootcamp/c1/unit5-css/todo_list.css",
+		"/D/wd-bootcamp/c1/unit6-css/tic-tac-toe.html",
+		"/D/wd-bootcamp/c1/unit6-css/tic-tac-toe-styles.css",
+		"/D/wd-bootcamp/c1/unit6-css/fonts.html",
+		"/D/wd-bootcamp/c1/unit6-css/fonts-styles.css",
+		"/D/wd-bootcamp/c1/unit5-css/09-Selector-Exercise-Starter/09_Selector_Exercise_Starter/selectorsExercise.html",
+		"/D/wd-bootcamp/c1/unit5-css/todo_list.html",
+		"/D/wd-bootcamp/c1/unit5-css/about.html",
+		"/D/wd-bootcamp/c1/unit 4/task1.html",
+		"/D/wd-bootcamp/c1/first-page.html",
+		"/D/wd-bootcamp/c1/task2-html.html",
+		"/D/wd-bootcamp/c1/list-task1.html",
+		"/D/wd-bootcamp/c1/div-task1.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"slides",
+			"slide",
+			"title",
+			"true",
+			"false",
+			"femaleAttrs",
+			"getElementById",
+			"false",
+			"true",
+			"false",
+			"true",
+			"required",
+			"true",
+			"false",
+			"willValidate",
+			"required",
+			"false",
+			"true",
+			"false",
+			"\";\n",
+			"block",
+			"none",
+			"female",
+			"none",
+			"title",
+			"address",
+			"Address",
+			"address",
+			"Last",
+			"required",
+			"checked",
+			"180",
+			"height",
+			"Height",
+			"height",
+			"Nazwisko",
+			"lastName",
+			"text",
+			"lastName",
+			"Imie",
+			"firstName",
+			"text",
+			"firstName",
+			"Imie",
+			"Nazwisko",
+			"firstName",
+			"lastName",
+			"text",
+			"lastName",
+			"text",
+			"firstName",
+			"print",
+			"*",
+			"89650",
+			"400",
+			"bold",
+			"Beeturia",
+			"active",
+			"Link",
+			"backgrou",
+			"9b59b6",
+			"bdc3c7",
+			"solid",
+			"Sport",
+			"March",
+			"Feb",
+			"January",
+			"text",
+			"firstName",
+			"text",
+			"male",
+			"Male",
+			"male",
+			"firstName",
+			"First",
+			"firstName",
+			"green",
+			"Red",
+			"Dogs",
+			"dogs",
+			"text",
+			"username",
+			"Username",
+			"username",
+			"name",
+			"text",
+			"Green",
+			"Heading",
+			"g",
+			"sunt",
+			"laborum",
+			"Boilerplate",
+			"Red",
+			"comment",
+			"head",
+			"comment"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/vfr_data_analysis/samples.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								635,
+								635
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/VFR/wesu-app-data-quality-analysis/wesu-app-data-quality-analysis/perform_detection.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "student-list.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
