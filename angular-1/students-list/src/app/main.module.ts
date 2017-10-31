@@ -1,18 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { HelloComponent } from './hello.component';
-import { StudentComponent } from './student/student.component';
+import {GroupComponent} from './group.component';
+import {StudentComponent} from './student/student.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-    HelloComponent,
+    GroupComponent,
     StudentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
-  bootstrap: [HelloComponent]
+  bootstrap: [GroupComponent]
 })
-export class MainModule { }
+export class MainModule {
+}

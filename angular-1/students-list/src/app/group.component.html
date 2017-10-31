@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome {{ firstName }} {{ lastName }}!
+  </h1>
+</div>
+
+<div id="student-list">
+  <ul>
+    <li *ngFor="let student of group" (click)="onStudentSelected(student)">
+      <p [ngClass]="{'passed': student.grade >= 3.0, 'not-passed': student.grade < 3.0}">{{ student.firstName }} {{ student.lastName }} - {{ student.grade }}</p>
+    </li>
+  </ul>
+
+  <student-detail [student]="selectedStudent"></student-detail>
+</div>
+
+

@@ -1,3 +1,7 @@
-<div>
-  <p>Komponent Studenta</p>
+<div *ngIf="student">
+  <h3>{{student.firstName}} {{student.lastName}}</h3>
+  <div>
+    <label>Grade:
+    <input type="number" [(ngModel)]="student.grade" pattern="[2-5]" placeholder="{{student.grade}}"/></label>
+  </div>
 </div>
