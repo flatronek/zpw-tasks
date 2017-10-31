@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+<h2>Bikes</h2>
+<div>
+  <div *ngFor="let bike of bikes" (click)="onBikeSelected(bike)">
+    <div>
+      <p>{{ bike.name | uppercase }}</p>
+      <p>{{ bike.price | currency:'USD':true:'1.2-2'}}</p>
+      <p *ngIf="bike.count >= 1; else noBikesText">Dostępnych {{bike.count}} sztuk</p>
+      <ng-template #noBikesText>Niedostępne!</ng-template>
+    </div>
+    <div>
+      <p>Zamówienie: {{bike.order}} sztuk.</p>
+      <p><button (click)="removeFromOrder(bike)">-</button> <button (click)="addToOrder(bike)">+</button></p>
+    </div>
+  </div>
+</div>
+
+<p>Wszystkich dostępnych rowerów: {{totalBikesCount}}</p>
+
+<bike-details [bike]="selectedBike"></bike-details>
+
