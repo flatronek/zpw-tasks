@@ -1,0 +1,25 @@
+.bike-content-layout {
+  float: left;
+  width: 100%;
+  margin-right: -180px;
+  padding-right: 200px;
+}
+
+.bike-order-layout {
+  width: 180px;
+  float:right;
+  position:relative;
+  text-align: center;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.bike-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #0169a1;
+  border-radius: 5px;
+}
