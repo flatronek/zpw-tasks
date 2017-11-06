@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<p>Wszystkich dostępnych rowerów: {{totalBikesCount}}</p>
+<p [ngClass]="{'large-availability': totalBikesCount > 10, 'small-availability': totalBikesCount <= 10}">Wszystkich dostępnych rowerów: {{totalBikesCount}}</p>
 
 <bike-details [bike]="selectedBike"></bike-details>
 
