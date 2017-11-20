@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"recipientName": {
+			"name": "recipientName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "recipientName",
+			"order": 0
+		},
+		"recipientAddress": {
+			"name": "recipientAddress",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "recipientAddress",
+			"order": 1
+		},
+		"items": {
+			"name": "items",
+			"type": "array",
+			"typeLabel": "array",
+			"required": true,
+			"id": "items",
+			"order": 2
+		}
+	}
+}
