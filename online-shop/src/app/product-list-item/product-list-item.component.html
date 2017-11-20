@@ -1,0 +1,15 @@
+<div class="card product-item">
+  <div class="card-body row">
+    <div class="col-md-9">
+      <h4 class="card-title">{{product.name}}</h4>
+      <p class="card-text">{{product.description}}</p>
+    </div>
+    <div class="col-md-3">
+      <div class="bg-primary">{{product.price | currency:'USD':'symbol':'1.2-2'}}</div>
+
+      <div>
+        <a class="btn btn-primary" role="button" (click)="buyProduct()" routerLink="/basket">Kup</a>
+      </div>
+    </div>
+  </div>
+</div>

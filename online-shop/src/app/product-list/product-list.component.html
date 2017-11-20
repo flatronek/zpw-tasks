@@ -1,0 +1,20 @@
+<div *ngIf="category">
+  <h3>Produkty</h3>
+  <app-product-list-item *ngFor="let product of products" [product]="product"></app-product-list-item>
+
+  <div style="text-align: center">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-outline-primary" [ngClass]="{'disabled': currentPage <= 1}" (click)="onPageChanged(currentPage - 1)">
+        Previous
+      </button>
+
+      <button *ngFor="let page of pages" type="button" class="btn btn-outline-primary" [ngClass]="{'active': page === this.currentPage}"
+          (click)="onPageChanged(page)">{{page}}
+      </button>
+
+      <button type="button" class="btn btn-outline-primary" [ngClass]="{'disabled': currentPage >= pagesCount}"
+          (click)="onPageChanged(currentPage + 1)">Next
+      </button>
+    </div>
+  </div>
+</div>

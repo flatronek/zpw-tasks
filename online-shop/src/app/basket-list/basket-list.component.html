@@ -1,0 +1,26 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Ilość</th>
+      <th scope="col">Produkt</th>
+      <th scope="col">Cena</th>
+      <th scope="col">Wartość</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of basketItems">
+      <td>{{item.count}}</td>
+      <td>{{item.shopItem.name}}</td>
+      <td>{{item.shopItem.price}}</td>
+      <td>{{item.shopItem.price * item.count}}</td>
+      <td  class="text-right">
+        <button class="btn btn-primary" (click)="removeItem(item)">Usuń</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <p class="text-right">Wartość całkowita: {{totalPrice | currency:'USD':'symbol':'1.2-2'}}</p>
+</div>

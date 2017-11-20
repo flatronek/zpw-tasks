@@ -1,0 +1,9 @@
+<div>
+  <h2>Twój koszyk</h2>
+  <app-basket-list></app-basket-list>
+
+  <div class="text-center">
+    <button class="btn btn-primary" routerLink="/shop">Kontynuuj zakupy</button>
+    <button class="btn btn-primary" [ngClass]="{'disabled': isEmpty}" [disabled]="isEmpty" routerLink="/order">Zakończ zamówienie</button>
+  </div>
+</div>

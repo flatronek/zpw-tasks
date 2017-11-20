@@ -1,0 +1,7 @@
+.category-item-container {
+  height: 36px;
+}
+
+.category-item-container:hover {
+  background-color: darkolivegreen;
+}
