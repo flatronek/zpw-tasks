@@ -1,0 +1,40 @@
+
+
+	.timer {
+		margin: 10px 0px 10px 0px;
+	}
+
+	.timer-marker {
+		width: 100%;
+	}
+
+	.question-indicators {
+		display: inline;
+	}
+
+	.question-indicator {
+		float: left;
+		width: 20%;
+		height: 10px;
+		border: 1px solid blue;
+	}
+
+	.correct {
+		background-color: green;
+	}
+
+	.wrong {
+		background-color: red;
+	}
+
+	.unanswered {
+		background-color: gray;
+	}
+
+	.current {
+		background-color: blue;
+	}
+
+	.answer {
+		padding: 2px;
+	}

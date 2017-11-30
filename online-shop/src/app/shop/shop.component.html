@@ -1,0 +1,4 @@
+<div class="row">
+  <app-categories-list (onCategorySelected)="onCategorySelected($event)" class="col-md-3"></app-categories-list>
+  <app-product-list [category]="selectedCategory" class="col-md-9"></app-product-list>
+</div>

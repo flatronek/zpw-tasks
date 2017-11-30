@@ -1,26 +1,38 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <h1 class="h1">
     Welcome to {{title}}!
   </h1>
 </div>
-<h2>Bikes</h2>
+<h2 class="h2">Bikes</h2>
 <div>
   <div *ngFor="let bike of bikes" (click)="onBikeSelected(bike)">
-    <div>
-      <p>{{ bike.name | uppercase }}</p>
-      <p>{{ bike.price | currency:'USD':true:'1.2-2'}}</p>
-      <p *ngIf="bike.count >= 1; else noBikesText">Dostępnych {{bike.count}} sztuk</p>
-      <ng-template #noBikesText>Niedostępne!</ng-template>
-    </div>
-    <div>
-      <p>Zamówienie: {{bike.order}} sztuk.</p>
-      <p><button (click)="removeFromOrder(bike)">-</button> <button (click)="addToOrder(bike)">+</button></p>
+
+    <div class="bike-container border">
+
+      <div class="bike-content-layout">
+        <div class="bike-title">{{ bike.name | uppercase }}</div>
+        <div class="bike-price">{{ bike.price | currency:'USD':true:'1.2-2'}}</div>
+        <div class="bike-availability" *ngIf="bike.count >= 1; else noBikesText">Dostępnych {{bike.count}} sztuk</div>
+        <ng-template #noBikesText>
+          <div class="">Niedostępne!</div>
+        </ng-template>
+      </div>
+
+      <div class="bike-order-layout">
+        <div>Zamówienie: {{bike.order}} sztuk.</div>
+        <div class="btn-group">
+          <button class="btn btn-primary" [disabled]="bike.order <= 0" (click)="removeFromOrder(bike)">-</button>
+          <button class="btn btn-primary" [disabled]="bike.count <= 0" (click)="addToOrder(bike)">+</button>
+        </div>
+      </div>
+
+      <div class="clear-both"></div>
     </div>
   </div>
 </div>
 
-<p>Wszystkich dostępnych rowerów: {{totalBikesCount}}</p>
+<p [ngClass]="{'large-availability': totalBikesCount > 10, 'small-availability': totalBikesCount <= 10}">Wszystkich dostępnych rowerów: {{totalBikesCount}}</p>
 
 <bike-details [bike]="selectedBike"></bike-details>
 
