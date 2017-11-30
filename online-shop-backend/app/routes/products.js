@@ -6,9 +6,19 @@ var Product = require('../models/Product.js');
 
 router.get('/', (request, response, next) => {
 	console.log(`${request.method} on /products`)
+
 	var limit = request.query.limit
 	var offset = request.query.offset
-	Product.find(function (err, products) {
+	if (offset == undefined) {
+		offset = 0
+	}
+
+	var dbQuery = Product.find().skip(offset)
+	if (limit != undefined) {
+		dbQuery = dbQuery.limit(limit)
+	} 
+
+	dbQuery.exec(function (err, products) {
 		if (err) return next(err);
 		response.json(products);
 	});
