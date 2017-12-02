@@ -1,0 +1,16 @@
+<div class="container">
+
+  <form (ngSubmit)="onLoginPressed()">
+    <div class="form-group">
+      <label for="loginInput">Email address</label>
+      <input type="text" class="form-control" id="loginInput" name="login" aria-describedby="emailHelp"
+             placeholder="Login" [(ngModel)]="user.login" required>
+    </div>
+    <div class="form-group">
+      <label for="passwordInput">Password</label>
+      <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="password"
+             [(ngModel)]="user.password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
