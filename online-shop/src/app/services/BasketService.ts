@@ -13,7 +13,7 @@ export class BasketService {
 
   addItemToBasket(product: Product) {
     console.log(`Adding ${product} to basket.`);
-    const item = this.basketItems.find(value => value.shopItem == product);
+    const item = this.basketItems.find(value => value.shopItem._id == product._id);
     if (item != null) {
       item.count++;
     } else {

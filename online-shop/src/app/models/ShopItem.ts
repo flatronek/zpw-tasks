@@ -2,7 +2,7 @@ export class Product {
 
   _id: string;
   name: string;
-  description: string;
+  desc: string;
   price: number;
   category: string;
   count: string;
@@ -11,7 +11,7 @@ export class Product {
   constructor(id: string, name: string, description: string, price: number, category: string) {
     this._id = id;
     this.name = name;
-    this.description = description;
+    this.desc = description;
     this.price = price;
     this.category = category;
   }

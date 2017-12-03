@@ -23,8 +23,11 @@ export class ProductService {
       );
   }
 
-  getProducts(): Product[] {
-    return PRODUCTS;
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl)
+      .pipe(
+        tap(data => console.log(data))
+      );
   }
 
   getProductsCountByCategory(category: string): Observable<number> {
@@ -45,15 +48,15 @@ export class ProductService {
   searchProducts(query: string): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl)
       .pipe(
-        map((products: Product[]) => products.filter(product => product.name.includes(query) || product.category.includes(query) || product.description.includes(query) )),
+        map((products: Product[]) => products.filter(product => product.name.includes(query) || product.category.includes(query) || product.desc.includes(query) )),
         tap(data => console.log(data))
       );
   }
 
-  filterProductsByPrice(lowerPrice = 0, upperPrice = -1): Observable<Product[]> {
+  filterProductsByPrice(lowerPrice = 0, upperPrice = 0): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl)
       .pipe(
-        map((products: Product[]) => products.filter(product => product.price > lowerPrice && (upperPrice == -1 || product.price < upperPrice))),
+        map((products: Product[]) => products.filter(product => product.price > lowerPrice && (upperPrice <= 0 || product.price < upperPrice))),
         tap(data => console.log(data))
       );
   }

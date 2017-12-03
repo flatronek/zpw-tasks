@@ -1,8 +1,5 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Category} from "../models/Category";
-import {ProductService} from "../services/ProductService";
-import {Product} from "../models/ShopItem";
-import {Observable} from "rxjs/Observable";
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Product} from '../models/ShopItem';
 
 @Component({
   selector: 'app-product-list',
@@ -13,51 +10,30 @@ export class ProductListComponent implements OnInit, OnChanges {
 
   readonly ITEMS_PER_PAGE = 3;
 
-  @Input() category: string;
+  @Input() products: Product[];
+  @Output() pageChanged = new EventEmitter<number>();
 
-  products: Product[];
+  displayedProducts: Product[];
 
-  currentPage: number = 1;
   pagesCount: number = 0;
-
-  constructor(private dataService: ProductService) {
-  }
+  currentPage: number = 1;
 
   ngOnInit() {
-    this.products = this.dataService.getProducts();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.category.currentValue != null) {
-      this.dataService.getProductsCountByCategory(this.category)
-        .subscribe(productsCount => {
-          this.pagesCount = this.calculatePagesCount(productsCount);
-          this.currentPage = 1;
-        }, error => {
-          console.error(error);
-          alert("Error when downloading data: " + error.message);
-        });
+    if (changes.products.currentValue != null) {
+      this.pagesCount = this.calculatePagesCount(this.products.length);
+      this.currentPage = 1;
 
-      this.dataService.getProductsByCategory(changes.category.currentValue, 0, this.ITEMS_PER_PAGE)
-        .subscribe(products => this.products = products,
-          error => {
-            console.error(error);
-            alert("Error when downloading data: " + error.message);
-          });
-
-      // console.log(`Category changed, totalProductsCount ${totalProductsCount}, pagesCount ${this.pagesCount}, page products: ${this.products.length}`);
+      this.selectDisplayed();
     }
   }
 
   onPageChanged(page: number) {
     if (page > 0 && page <= this.pagesCount) {
       this.currentPage = page;
-      this.dataService.getProductsByCategory(this.category, (page - 1) * this.ITEMS_PER_PAGE, this.ITEMS_PER_PAGE)
-        .subscribe(products => this.products = products,
-          error => {
-            console.error(error);
-            alert("Error when downloading data: " + error.message);
-          });
+      this.selectDisplayed();
     }
   }
 
@@ -67,5 +43,10 @@ export class ProductListComponent implements OnInit, OnChanges {
 
   private calculatePagesCount(itemsCount: number): number {
     return Math.ceil(itemsCount / this.ITEMS_PER_PAGE);
+  }
+
+  private selectDisplayed() {
+    let start = (this.currentPage - 1) * this.ITEMS_PER_PAGE;
+    this.displayedProducts = this.products.slice(start, start + this.ITEMS_PER_PAGE);
   }
 }

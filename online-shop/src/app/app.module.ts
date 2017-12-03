@@ -13,6 +13,7 @@ import {BasketService} from './services/BasketService';
 import {BasketComponent} from './basket/basket.component';
 import {OrderComponent} from './order/order.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ProductService, BasketService],
   bootstrap: [AppComponent]

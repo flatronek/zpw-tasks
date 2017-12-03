@@ -1,13 +1,28 @@
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-4">
     <app-categories-list (onCategorySelected)="onCategorySelected($event)"></app-categories-list>
-    <div class="col-md-6">
+
+    <div class="my-2">
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
                [(ngModel)]="searchPhrase" name="searchPhrase">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchClicked()">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="onSearchClicked()">Search</button>
       </form>
     </div>
+
+    <div class="my-2 container">
+      <div class="row">
+        <input class="form-control mr-sm-2 col-md-5" type="number" placeholder="Search" aria-label="Search"
+               [(ngModel)]="lowerLimit" name="lowerLimit">
+        <input class="form-control mr-sm-2 col-md-5" type="number" placeholder="Search" aria-label="Search"
+               [(ngModel)]="upperLimit" name="upperLimit">
+      </div>
+      <div class="row my-2">
+        <div class="btn btn-primary my-2 mr-sm-2 my-sm-0 col-md-5" (click)="onFilterClicked()">Filter</div>
+        <div class="btn btn-primary my-2 mr-sm-2 my-sm-0 col-md-5" (click)="onResetClicked()">Reset</div>
+      </div>
+    </div>
+
   </div>
-  <app-product-list [category]="selectedCategory" class="col-md-9"></app-product-list>
+  <app-product-list [products]="products" class="col-md-8"></app-product-list>
 </div>
