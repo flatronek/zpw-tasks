@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Category} from '../models/Category';
 import {ProductService} from '../services/ProductService';
 import {Product} from '../models/ShopItem';
+import {PromoService} from "../services/PromoService";
 
 @Component({
   selector: 'app-shop',
@@ -23,6 +24,7 @@ export class ShopComponent implements OnInit {
 
   ngOnInit() {
     this.getAllProducts();
+
   }
 
   onCategorySelected(category: string) {

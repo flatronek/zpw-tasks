@@ -14,6 +14,7 @@ import {BasketComponent} from './basket/basket.component';
 import {OrderComponent} from './order/order.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {PromoService} from "./services/PromoService";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ProductService, BasketService],
+  providers: [ProductService, BasketService, PromoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

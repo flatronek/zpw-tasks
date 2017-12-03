@@ -5,5 +5,10 @@
   </h1>
 </div>
 <div class="container">
+  <div *ngIf="promoActive">
+    <div class="alert alert-primary" role="alert">
+      Hurry up! We've got {{discountText}}% discount active for {{ timeLeftMinutes | number : '2.0-0'}}:{{ timeLeftSeconds | number : '2.0-0'}} only!
+    </div>
+  </div>
   <router-outlet></router-outlet>
 </div>

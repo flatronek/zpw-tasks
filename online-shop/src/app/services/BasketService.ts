@@ -5,6 +5,7 @@ import {Order, OrderProduct} from '../models/Order';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {tap} from 'rxjs/operators';
+import {PromoService} from "./PromoService";
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -18,7 +19,7 @@ export class BasketService {
 
   private basketItems: BasketEntry[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private promoService: PromoService) {
   }
 
   getBasketItems() {
@@ -41,6 +42,10 @@ export class BasketService {
 
   sendOrder(recipientName: string, recipientAddress: string): Observable<Order> {
     const order = this.mapBasketEntriesToOrder(recipientName, recipientAddress, this.basketItems);
+    if (this.promoService.hasActivePromo) {
+      order.items.forEach(item => item.price = item.price * 0.8);
+    }
+
     return this.http.post<Order>(this.ordersUrl, order, httpOptions)
       .pipe(
         tap(data => {
