@@ -1,12 +1,15 @@
 var mongoose = require('mongoose');
 
 var OrderSchema = new mongoose.Schema({
+	recipientId: String,
 	recipientName: String,
 	recipientAddress: String,
+	status: String,
 	items: [{
 		_id: mongoose.Schema.ObjectId,
 		name: String,
-		desc: String
+		orderedCount: Number,
+		price: Number
 	}]
 });
 
