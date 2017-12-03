@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit, OnChanges {
 
   readonly ITEMS_PER_PAGE = 3;
 
-  @Input() category: Category;
+  @Input() category: string;
 
   products: Product[];
 

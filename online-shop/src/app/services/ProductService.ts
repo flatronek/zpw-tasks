@@ -9,42 +9,51 @@ import {map, tap} from "rxjs/operators";
 @Injectable()
 export class ProductService {
 
-  private baseUrl = 'http://localhost:5500/';
+  private baseUrl = 'http://localhost:3000/';
   private categoriesUrl = this.baseUrl + 'categories';  // URL to web api
   private productsUrl = this.baseUrl + 'products';
 
   constructor(private http: HttpClient) {
   }
 
-  getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(this.categoriesUrl)
+  getCategories(): Observable<string[]> {
+    return this.http.get<Product[]>(this.productsUrl)
       .pipe(
-        tap(data => console.log(data))
-      )
+        map((products: Product[]) => Array.from(new Set(products.map(product => product.category))))
+      );
   }
 
   getProducts(): Product[] {
     return PRODUCTS;
   }
 
-  getProductsCountByCategory(category: Category): Observable<number> {
-    let url = `${this.productsUrl}?categoryId=${category.id}`;
-    return this.http.get<Product[]>(url)
+  getProductsCountByCategory(category: string): Observable<number> {
+    return this.http.get<Product[]>(this.productsUrl)
       .pipe(
         map(products => (products as Product[]).length)
-      )
+      );
   }
 
-  getProductsByCategory(category: Category, offset: number = 0, count: number = 0): Observable<Product[]> {
-    let pagination = {
-      $skip: offset,
-      $limit: count,
-      categoryId: category.id
-    };
-    let url = `${this.productsUrl}?${JSON.stringify(pagination)}`;
-
-    return this.http.get<Product[]>(url)
+  getProductsByCategory(category: string, offset = 0, limit = 0): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl)
       .pipe(
+        map((products: Product[]) => products.filter(product => product.category == category)),
+        tap(data => console.log(data))
+      );
+  }
+
+  searchProducts(query: string): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl)
+      .pipe(
+        map((products: Product[]) => products.filter(product => product.name.includes(query) || product.category.includes(query) || product.description.includes(query) )),
+        tap(data => console.log(data))
+      );
+  }
+
+  filterProductsByPrice(lowerPrice = 0, upperPrice = -1): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl)
+      .pipe(
+        map((products: Product[]) => products.filter(product => product.price > lowerPrice && (upperPrice == -1 || product.price < upperPrice))),
         tap(data => console.log(data))
       );
   }

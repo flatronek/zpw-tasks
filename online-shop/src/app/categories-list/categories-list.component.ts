@@ -9,10 +9,10 @@ import {Category} from "../models/Category";
 })
 export class CategoriesListComponent implements OnInit {
 
-  allCategories: Category[];
+  allCategories: string[];
 
-  @Output() onCategorySelected = new EventEmitter<Category>();
-  selectedCategory: Category;
+  @Output() onCategorySelected = new EventEmitter<string>();
+  selectedCategory: string;
 
   constructor(private dataService: ProductService) {
   }
@@ -23,10 +23,10 @@ export class CategoriesListComponent implements OnInit {
         error => {
           console.error(error);
           alert("Error when downloading data: " + error.message);
-        })
+        });
   }
 
-  selectCategory(category: Category) {
+  selectCategory(category: string) {
     this.selectedCategory = category;
     this.onCategorySelected.emit(category);
   }

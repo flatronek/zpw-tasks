@@ -1,4 +1,13 @@
 <div class="row">
-  <app-categories-list (onCategorySelected)="onCategorySelected($event)" class="col-md-3"></app-categories-list>
+  <div class="col-md-3">
+    <app-categories-list (onCategorySelected)="onCategorySelected($event)"></app-categories-list>
+    <div class="col-md-6">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+               [(ngModel)]="searchPhrase" name="searchPhrase">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchClicked()">Search</button>
+      </form>
+    </div>
+  </div>
   <app-product-list [category]="selectedCategory" class="col-md-9"></app-product-list>
 </div>

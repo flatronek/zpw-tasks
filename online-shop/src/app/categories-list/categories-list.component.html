@@ -1,6 +1,6 @@
 <div>
   <h3>Kategoria</h3>
   <div *ngFor="let category of allCategories" class="btn btn-secondary btn-block category-item-container" [ngClass]="{'active': category === selectedCategory}" (click)="selectCategory(category)">
-    {{ category.name }}
+    {{ category }}
   </div>
 </div>

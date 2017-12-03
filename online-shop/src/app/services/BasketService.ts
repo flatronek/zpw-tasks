@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {Product} from "../models/ShopItem";
-import {BasketEntry} from "../models/BasketEntry";
+import {Injectable} from '@angular/core';
+import {Product} from '../models/ShopItem';
+import {BasketEntry} from '../models/BasketEntry';
 
 @Injectable()
 export class BasketService {
@@ -13,7 +13,7 @@ export class BasketService {
 
   addItemToBasket(product: Product) {
     console.log(`Adding ${product} to basket.`);
-    let item = this.basketItems.find(value => value.shopItem == product);
+    const item = this.basketItems.find(value => value.shopItem == product);
     if (item != null) {
       item.count++;
     } else {
@@ -26,17 +26,17 @@ export class BasketService {
   }
 
   removeProductFromBasket(product: Product) {
-    let item = this.basketItems.find(value => value.shopItem == product);
+    const item = this.basketItems.find(value => value.shopItem == product);
     if (item != null) {
-      this.removeItemFromBasket(item)
+      this.removeItemFromBasket(item);
     }
   }
 
-  getBasketTotalPrice() {
+  getBasketTotalPrice(): number {
     return this.basketItems.map(item => item.shopItem.price * item.count).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
   }
 
   isEmpty() {
-    return this.basketItems.length == 0;
+    return this.basketItems.length === 0;
   }
 }
