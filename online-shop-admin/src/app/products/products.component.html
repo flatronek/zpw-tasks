@@ -1,3 +1,25 @@
-<p>
-  products works!
-</p>
+<div>
+
+  <app-toolbar [selectedTab]="'products'"></app-toolbar>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <app-add-product-modal (productAdded)="onProductAdded($event)"></app-add-product-modal>
+      </div>
+
+      <div class="col-md-6">
+        <form class="form-inline my-2 my-lg-0 float-right">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchPhrase" name="searchPhrase">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchClicked()">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <app-product-item *ngFor="let product of products" [product]="product" (productRemoveAction)="deleteProduct($event)"></app-product-item>
+    </div>
+  </div>
+</div>

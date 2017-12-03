@@ -1,0 +1,40 @@
+<div class="card product-item">
+  <div class="card-body row">
+
+    <div class="col-md-10">
+
+      <div class="input-group product-data-element">
+        <span class="input-group-addon" id="product-name-addon1">Name</span>
+        <input type="text" class="form-control" placeholder="Product name" aria-label="Product name"
+               aria-describedby="product-name-addon1" [(ngModel)]="product.name">
+      </div>
+
+      <div class="input-group product-data-element">
+        <span class="input-group-addon" id="basic-addon1">Description</span>
+        <input type="text" class="form-control" placeholder="Description" aria-label="Description"
+               aria-describedby="basic-addon1" [(ngModel)]="product.desc">
+      </div>
+
+      <div class="input-group product-data-element">
+        <span class="input-group-addon" id="product-category-label">Description</span>
+        <input type="text" class="form-control" placeholder="Description" aria-label="Description"
+               aria-describedby="product-category-label" [(ngModel)]="product.category">
+      </div>
+
+      <div class="input-group product-data-element">
+        <span class="input-group-addon">$</span>
+        <input type="number" class="form-control" [(ngModel)]="product.price">
+      </div>
+    </div>
+
+    <div class="col-md-2">
+
+      <div class="btn btn-primary" (click)="onSaveClicked()">Save</div>
+
+      <div class="btn btn-primary" (click)="onDeleteClicked()">Delete</div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,42 @@
+<div class="card card-body my-2">
+
+  <div class="row">
+    <div class="col-md-6">
+      {{order.recipientName}}
+    </div>
+
+    <div class="col-md-3">
+      {{orderValue | currency:'USD':'symbol':'1.2-2'}}
+    </div>
+
+    <div class="col-md-3">
+      <div class="btn btn-primary" (click)="onDeletePressed()">Delete</div>
+
+      <button class="btn btn-primary" type="button" data-toggle="collapse"
+              [attr.data-target]="'#orderDetails' + order._id"
+              aria-expanded="false" [attr.aria-controls]="'orderDetails' + order._id">
+        Expand
+      </button>
+    </div>
+  </div>
+
+  <div class="collapse" [attr.id]="'orderDetails' + order._id">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Produkt</th>
+        <th scope="col">Sztuk</th>
+        <th scope="col">Wartość</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of order.items">
+        <td>{{item.name}}</td>
+        <td>{{item.orderedCount}}</td>
+        <td>{{item.price * item.orderedCount | currency:'USD':'symbol':'1.2-2'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

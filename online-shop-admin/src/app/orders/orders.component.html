@@ -1,0 +1,10 @@
+
+
+<div>
+
+  <app-toolbar [selectedTab]="'orders'"></app-toolbar>
+
+  <div class="container">
+    <app-order-item *ngFor="let order of orders" [order]="order" (deleteEvent)="deleteOrder($event)"></app-order-item>
+  </div>
+</div>
