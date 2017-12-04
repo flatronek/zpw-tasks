@@ -18,6 +18,7 @@ import {ProductService} from "./services/ProductService";
 import {OrderItemComponent} from './order-item/order-item.component';
 import {OrdersService} from "./services/OrdersService";
 import {HttpClientModule} from "@angular/common/http";
+import {PromoService} from "./services/PromoService";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,14 @@ import {HttpClientModule} from "@angular/common/http";
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthService, EnsureAuthenticated, LoginRedirect, ProductService, OrdersService],
+  providers: [
+    AuthService,
+    EnsureAuthenticated,
+    LoginRedirect,
+    ProductService,
+    OrdersService,
+    PromoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

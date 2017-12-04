@@ -16,10 +16,6 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-var categories = require('./routes/categories');
-var products = require('./routes/products');
-var orders = require('./routes/orders');
-
 app.use((request, response, next) => {
 	console.log("Received Request")
 	console.log("Headers: " + JSON.stringify(request.headers))
@@ -30,9 +26,30 @@ app.use((request, response, next) => {
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+	res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
 	next();
 });
+
+// app.use(function(req, res, next) {
+// 	var adminPassEnc = new Buffer("admin:admin").toString('base64');
+// 	var correctAuthHeader = "Basic " + adminPassEnc;
+// 	console.log("Correct auth header: " + correctAuthHeader);
+// 	console.log("Req method: " + req.method + ", req url: " + req.originalUrl);
+// 	console.log("Auth header: " + req.headers["authorization"]);
+
+// 	if (((req.method == "GET" || req.method == "OPTIONS") && req.originalUrl == "/products") 
+// 		|| ((req.method == "GET" || req.method == "OPTIONS") && req.originalUrl == "/orders")
+// 		|| req.headers["authorization"] == correctAuthHeader) {
+
+// 		next();
+// 	} else {
+// 		res.status(401).end();
+// 	}
+// });
+
+var categories = require('./routes/categories');
+var products = require('./routes/products');
+var orders = require('./routes/orders');
 
 app.use('/categories', categories);
 app.use('/products', products);
@@ -41,6 +58,10 @@ app.use('/orders', orders);
 var promoDuration;
 var promoStartTime;
 var promoDiscount;
+
+app.post('/login', (request, response, next) => {
+	response.status(200).end();
+});
 
 app.post('/promo', (request, response, next) => {
 	console.log(`${request.method} on /promo`);

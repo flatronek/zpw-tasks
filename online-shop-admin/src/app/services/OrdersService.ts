@@ -3,10 +3,8 @@ import {Observable} from "rxjs/Observable";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {tap} from "rxjs/operators";
 import {Injectable} from "@angular/core";
+import {HTTP_OPTIONS} from "./AuthService";
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
 
 @Injectable()
 export class OrdersService {
@@ -17,7 +15,7 @@ export class OrdersService {
   }
 
   getOrders(): Observable<Order[]> {
-    return this.http.get<Order[]>(this.ordersUrl, httpOptions)
+    return this.http.get<Order[]>(this.ordersUrl, HTTP_OPTIONS)
       .pipe(
         tap((orders: Order[]) => console.log("Orders downloaded: " + orders))
       );
@@ -25,7 +23,7 @@ export class OrdersService {
 
   deleteOrder(order: Order): Observable<Order> {
     const url = `${this.ordersUrl}/${order._id}`;
-    return this.http.delete<Order>(url, httpOptions)
+    return this.http.delete<Order>(url, HTTP_OPTIONS)
       .pipe(
         tap((orders: Order) => console.log("Orders deleted: " + orders))
       );

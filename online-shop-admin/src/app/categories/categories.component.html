@@ -1,8 +1,26 @@
 <div>
+  <app-toolbar [selectedTab]="'promos'"></app-toolbar>
 
-  <app-toolbar [selectedTab]="'categories'"></app-toolbar>
+  <div class="container">
+    <div class="card card-body my-2">
 
-  <p>
-    categories works!
-  </p>
+      <div class="my-2">
+        <div class="input-group product-data-element my-2">
+          <span class="input-group-addon" id="product-name-addon1">Duration</span>
+          <input type="number" class="form-control" placeholder="20" aria-label="Promo duration"
+                 aria-describedby="product-name-addon1" [(ngModel)]="promoDuration" required>
+        </div>
+
+        <div class="input-group product-data-element my-2">
+          <span class="input-group-addon" id="basic-addon1">Discount</span>
+          <input type="number" class="form-control" placeholder="20" aria-label="Promo discount"
+                 aria-describedby="basic-addon1" [(ngModel)]="promoDiscount" required>
+        </div>
+
+        <div class="btn btn-primary my-2" (click)="addPromoClicked()">Add promo</div>
+
+      </div>
+    </div>
+
+  </div>
 </div>

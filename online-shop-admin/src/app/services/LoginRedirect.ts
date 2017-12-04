@@ -18,5 +18,4 @@ export class LoginRedirect implements CanActivate {
       return true;
     }
   }
-
 }

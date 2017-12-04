@@ -9,13 +9,12 @@ export class EnsureAuthenticated implements CanActivate {
 
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    // if (this.auth.getToken() != null) {
-    //   console.log("EnsureAuth: true");
-    //   return true;
-    // } else {
-    //   this.router.navigateByUrl("/login");
-    //   return false;
-    // }
-    return true;
+    if (this.auth.getToken() != null) {
+      console.log("EnsureAuth: true");
+      return true;
+    } else {
+      this.router.navigateByUrl("/login");
+      return false;
+    }
   }
 }

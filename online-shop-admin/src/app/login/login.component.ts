@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl("/products");
       }, error => {
         console.log("Login failed.");
+        alert("Login error: " + error.message);
       })
   }
 }
